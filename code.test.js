@@ -21,3 +21,6 @@ assert(JSON.stringify(depthFirstSearch(test1, 2, 0)) == JSON.stringify([]));
 // If it does work properly then it would pass the test. It also has a cycle from node 1 back to itself, which
 // could trip up the program if the program does not work.
 assert(JSON.stringify(depthFirstSearch(test1, 0, 2)) != JSON.stringify([]));
+
+// If the start and target node are the same:
+assert(JSON.stringify(depthFirstSearch(test1, 0, 0)) != JSON.stringify([]));

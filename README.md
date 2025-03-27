@@ -23,8 +23,14 @@ the function and run automatically when you commit through a GitHub action.
 
 ## Runtime Analysis
 
-What is the worst-case big $\Theta$ complexity of your implementation? Add your
-answer, including your reasoning, to this markdown file.
+What is the worst-case big $\Theta$ complexity of your implementation? 
+The complexity should be $\Theta(V^3)$  with the V being the number of vertices.
+My reasoning is that the worst case for the recursion would run through every vertex,
+giving us a $\Theta(V)$. Then we have a for loop that runs over each edge to that vertex
+which is actually the number of vertices, giving us another $\Theta(V)$. Then the .includes()
+actually has to run through all of the all of the vertices we have already itterated over, giving
+us another $\Theta(V)$. All together, this is how I reached the conclusion that the worst case big $\Theta$ 
+would be $\Theta(V)$.
 
 ## Bonus
 

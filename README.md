@@ -27,16 +27,12 @@ the function and run automatically when you commit through a GitHub action.
 ## Runtime Analysis
 
 What is the worst-case big $\Theta$ complexity of your implementation? 
-The complexity should be $\Theta(V^3)$  with the V being the number of vertices
+The complexity should be $\Theta(V + E)$  with the V being the number of vertices
 and E being the number of edges. My reasoning is that at worst case you will need
-to visit each vertex which gives us $\Theta(V)$. Then for each vertex there is 
-a for loop that will itterate over each possible vertext as well which ends up being
-the number of vertices in the graph giving us another $\Theta(V)$. Then finally, the
-.include() will give us a final $\Theta(V)$ because at worst case it will need to itterate
-V/2 to check if it has already been searched. Overall, this gives us $Theta(V * V * V/2) \in \Theta(V^3)$.
-I know that this seems odd because I have looked up what the usual complexity is for
-a depth first search algorithm is $\Theta(V + E)$ and I believe mine is different because
-I use a list to hold my searched vertices instead of a set.
+to visit each vertex which gives us $\Theta(V)$. And then in each node we check
+the edges to the other nodes, this sounds like it would be multiplied by E but 
+actually since we are adding it to a list and not rechecking that edge again, it
+actually ends up adding the E giving us $\Theta(V + E)$.
 
 ## Bonus
 

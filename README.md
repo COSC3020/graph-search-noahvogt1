@@ -1,4 +1,7 @@
 # Search in Graphs
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+I wrote everything myself. I only had help on the .includes() because I asked if there was a better way to do it and Gage told me about that method. Then I also looked to previous years test code to see how they did it(not what they did), I used my own logic to try and prove that the program worked properly. All I used from the last years was the assert line because I was still slightly confused on how to check a condition.
 
 Recall the pseudocode for Depth-First Search:
 
@@ -23,8 +26,13 @@ the function and run automatically when you commit through a GitHub action.
 
 ## Runtime Analysis
 
-What is the worst-case big $\Theta$ complexity of your implementation? Add your
-answer, including your reasoning, to this markdown file.
+What is the worst-case big $\Theta$ complexity of your implementation? 
+The complexity should be $\Theta(V + E)$  with the V being the number of vertices
+and E being the number of edges. My reasoning is that at worst case you will need
+to visit each vertex which gives us $\Theta(V)$. And then in each node we check
+the edges to the other nodes, this sounds like it would be multiplied by E but 
+actually since we are adding it to a list and not rechecking that edge again, it
+actually ends up adding the E giving us $\Theta(V + E)$.
 
 ## Bonus
 
